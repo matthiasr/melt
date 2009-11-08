@@ -1,0 +1,14 @@
+- lots of deprecation warnings on Melt.cpp
+- StyleUtils.cpp does not compile -> investigate errors (see below)
+
+
+
+----
+StyleUtils.cpp: In function 'BBitmap* FetchStyleResource(const char*)':
+StyleUtils.cpp:26: error: aggregate 'app_info info' has incomplete type and cannot be defined
+StyleUtils.cpp:45: error: invalid conversion from 'char**' to 'const char**'
+StyleUtils.cpp:45: error:   initializing argument 4 of 'bool BResources::GetResourceInfo(int32, type_code*, int32*, const char**, size_t*)'
+StyleUtils.cpp:47: error: 'strcmp' was not declared in this scope
+StyleUtils.cpp:49: error: invalid conversion from 'const void*' to 'void*'
+StyleUtils.cpp:70: error: expected primary-expression before ')' token
+StyleUtils.cpp:70: error: 'cast_as' was not declared in this scope
