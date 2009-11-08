@@ -38,6 +38,11 @@
 	So Long, And Thanks For All The Fish!
 */
 
+/*
+	fixed binary paths for Haiku. Note that THIS BREAKS BeOS R5 COMPATIBILITY
+		-- 2009-11-08 Matthias Rampke
+*/
+
 #define MELT_SIG "application/x-vnd.atomatrix-melt"
 
 #include <stdio.h>
@@ -771,7 +776,7 @@ void CreateImage(MeltList* list,entry_ref* ref)
 				if (override) return;
 			};
 
-			sprintf (command,"/boot/home/config/bin/mkhybrid -a -r -J -V \"%s\" -o \"%s/Temp/%s.img\" \"%s\"",trackname,MELT_PATH,trackname,mypath);
+			sprintf (command,"/boot/common/bin/mkhybrid -a -r -J -V \"%s\" -o \"%s/Temp/%s.img\" \"%s\"",trackname,MELT_PATH,trackname,mypath);
 			
 			Log("Creating image file:");
 			Log(command);
@@ -1527,7 +1532,7 @@ void MeltApp::InitWindow()
 	NewProjWin->LogView->Insert("Melt runs:\n");
 	NewProjWin->Unlock();
 
-	FILE* f=popen("/boot/home/config/bin/cdrecord -scanbus","r");
+	FILE* f=popen("/boot/common/bin/cdrecord -scanbus","r");
 	
 	char buf[1024];
 	char bufzer[1024];
