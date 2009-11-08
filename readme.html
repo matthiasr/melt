@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<TITLE>Melt v1.3beta2 Copyright 2000 Lukas Hartmann / Atomatrix</TITLE>
+</HEAD>
+<BODY BGCOLOR=#ffffff>
+<H1>Melt v1.3beta2 - Documentation</H2>
+
+New in V1.3beta2:<BR>
+<UL>
+<LI>Even more R5 fixes.
+<LI>New image file feature completely disabled the folder->image feature, and thus
+rendered Melt's main feature useless... why didn't anybody report this?! It doesn't
+help anything to give the program bad ratings on BeBits without telling me what's wrong.
+Anyways, fixed this bug.
+<LI>Updated the <B>Usage</B> section of this manual, as always.
+</UL><BR>
+
+New in V1.3beta:<BR>
+<UL>
+<LI>R5 fixes.
+<LI>You can now drop .iso/.img files. Worked nicely with the FreeBSD 4.0 release
+ISO (bootable).
+<LI>Several bugs squished.</UL><BR>
+
+New in v1.2beta:<BR>
+<UL>
+<LI>Audio CD mode: Drop RIFF WAVE files (14.4kHz, 16 bit, stereo) onto your Virtual Audio CD
+Window and compose your own audio CDs with minimum fuss. Make compatible files with <A HREF="http://www.bebits.com/app/152">SoundPlay</A>
+or rip 'em with <A HREF="http://www.bebits.com/app/518">cdparanoia</A>.
+<LI>CDRW blanking tools: Check it out. Complete with a nice blinking status LED ;)
+<LI>Various cosmetic enhancements. Thanks a lot to DOT for his <B>wonderful</B>
+<A HREF="http://www.bebits.com/app/895/">icons</A> that I stole.
+<LI>User friendliness enhancements.
+<LI>And more!
+</UL><BR><BR>
+New in v1.0beta 3: Should not crash anymore on some folders. Also let's you drop
+FAT32 folders, for example (via a trick, but that's no problem).
+
+<H2>Legal stuff</H2>
+<PRE>1. Disclaimer
+
+LUKAS HARTMANN AND/OR ATOMATRIX CANNOT BE HELD RESPONSIBLE FOR ANY LOSS OF DATA,
+MONEY, TIME, OR WHATEVER HAPPENS TO YOU DUE TO THE USE OF THIS PRODUCT. USE THIS
+AT YOUR OWN RISK.
+
+2. Copying
+
+The <A HREF="http://www.atomatrix.com/freeware/">Melt</A> .pkg file may be freely distributed as long as none of the contents
+are changed in any way. You must not make profit with Melt without a written
+permission by Lukas Hartmann.</PRE><BR><BR>
+<H2>Introduction</H2>
+OK. Said what had to be said.<BR>
+<B>Melt</B> is intended to aid you with burning data (I might add audio support in
+the future) CD-ROMs with <B>cdrecord</B> (&copy; J&ouml;rg Schilling) and <B>mkhybrid</B>
+(&copy; James Pearson). Better try it out yourself.<BR><BR>
+<H2>Requirements</H2>
+If you haven't done so yet, please <A HREF="http://www.bebits.com/app/547/">download</A> and
+install <B>CDR Tools</B> (which include <B>cdrecord</B> and <B>mkhybrid</B>). Melt
+probably crashes without them or causes other mayhems, I haven't tried.<BR><BR>
+<H2>Usage (Finally)</H2>
+Melt is designed to be easy to use. Almost everything should be self-explanatory - but heck,
+here are some tips that might help you:<BR><BR>
+<UL>
+<LI>You have to drop folders onto a Virtual CD window. The name of the folder will be
+the name of the data track. (That means, if you drop one folder, you'll have a CD that
+contains the contents of that folder and has the same name.)
+<LI>Always check if the size of the created image is OK. Always make sure you have enough
+space on your HD for your image files.
+<LI>If anything goes wrong while burning, please activate the Debug checkbox and send me
+the log's contents <B>after</B> cdrecord has finished.
+<LI>Better don't touch too much while cdrecord is burning. It's not healthy, believe me.
+<LI>You can press the right mouse button on a track to pop up a useful context menu.
+<LI>When choosing <B>Multisession</B> in the <B>New CD-R</B> window, please bear in mind
+that this uses the cdrecord default track mode (it's XA-2 or something). It works in
+BeOS, but I'm not sure whether Windoze, for example, will read your CD.
+<LI>If you want to add more tracks to your multisession CD-R, open a new <B>Multisession</B>
+mode <B>Virtual CD</B>, toss in your tracks, and burn it away.
+<LI>If you want to close your multisession CD-R, do the same thing in <B>Single Session</B>
+mode. If you just want to close the CD-R without adding more tracks, just burn a blank
+<B>Virtual CD</B>.
+<LI>The last trick can also be used to <B>Fixate</B> a broken CD-R, for example.
+<LI><B>Fixate</B> in <B>Simulate Only</B> mode is just a waste of time, methinks.
+</UL><BR><BR>
+<H2>Credits</H2>
+I want to thank:
+<UL>
+<LI><FONT COLOR=#ff0000>Be, Inc.</FONT>: For BeOS. Mmmm.
+<LI><FONT COLOR=#ff0000>J&ouml;rg Schilling</FONT>: For CDR Tools.
+<LI><FONT COLOR=#ff0000>Brazilian</FONT>: For pushing me into the right direction.
+<LI><FONT COLOR=#ff0000>ToLLen</FONT>: For his patience with that horrible bug.
+<LI><FONT COLOR=#ff0000>Anders</FONT>: For extensive debugging.
+<LI><FONT COLOR=#ff0000>TYU</FONT>: Also for extensive debugging.
+<LI><FONT COLOR=#ff0000>DOT</FONT>: For his wonderful artwork.
+<LI><FONT COLOR=#ff0000>Balatro</FONT>: Because.
+<LI><FONT COLOR=#ff0000>Resartus</FONT>: For help. :)
+<LI><FONT COLOR=#ff0000>ctate</FONT>: For lotsa mental support while I implemented the be_roster stuff ;)
+<LI><FONT COLOR=#ff0000>B_MINI</FONT>: I ended up using popen(), sorry.
+<LI><FONT COLOR=#ff0000>regurg</FONT>: Of course!
+<LI><FONT COLOR=#ff0000>#bedev</FONT>: For not banning me.
+<LI><FONT COLOR=#ff0000>The Ghetto (form. #beos)</FONT>: All the friendly + funny people.
+<LI><FONT COLOR=#ff0000>Vastator</FONT>: "melt?"
+<LI><FONT COLOR=#ff0000>twidBeOS and armando</FONT>: Thanks a lot for helpful Beta testing.
+<LI><FONT COLOR=#ff0000>Kurt von Finck</FONT>: For calling Scot Hacker :)
+<LI><FONT COLOR=#ff0000>TRUE_mnky</FONT>: For making Beta 2 possible. THANKS!
+<LI><FONT COLOR=#ff0000>Eugenia</FONT>: For voting 10. ;)
+<LI>... and everyone that I forgot (like <FONT COLOR=#ff0000>biteoN</FONT>).
+</UL><BR>
+Contact <A HREF="mailto:atomatrix@gmx.de">Lukas Hartmann</A>, who consumed all the coffee, for
+any ideas, blames, missing thankyous, or whatever.<BR><BR>
+Have fun!
+</BODY>
+</HTML>
