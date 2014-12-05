@@ -13,6 +13,7 @@
 #include <be/storage/File.h>
 #include <be/storage/Resources.h>
 #include <string.h>
+#include <type_traits>
 
 BBitmap *FetchStyleResource(const char *rcName)
 {
@@ -67,8 +68,7 @@ BBitmap *FetchStyleResource(const char *rcName)
 	
 	if(unarchived)
 	{
-		BBitmap *bmp = NULL;
-		bmp=cast_as(unarchived, BBitmap);
+		BBitmap *bmp = (BBitmap *)unarchived;
 
 		if (bmp)
 			return bmp;
