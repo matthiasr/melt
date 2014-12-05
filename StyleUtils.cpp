@@ -13,7 +13,6 @@
 #include <be/storage/File.h>
 #include <be/storage/Resources.h>
 #include <string.h>
-#include <type_traits>
 
 BBitmap *FetchStyleResource(const char *rcName)
 {
