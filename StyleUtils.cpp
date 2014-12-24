@@ -9,6 +9,7 @@
 */
 
 #include <be/app/Application.h>
+#include <be/app/Roster.h>
 #include <be/interface/Bitmap.h>
 #include <be/storage/File.h>
 #include <be/storage/Resources.h>
@@ -18,10 +19,10 @@ BBitmap *FetchStyleResource(const char *rcName)
 {
 	int i=0;
 	int32 id;
-	char *name;
+	const char *name;
 	size_t length;
 	type_code type;
-	void *data;
+	const void *data;
 	
 	// Initialize the file
 	app_info info;
