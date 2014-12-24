@@ -1532,7 +1532,7 @@ void MeltApp::InitWindow()
 	NewProjWin->LogView->Insert("Melt runs:\n");
 	NewProjWin->Unlock();
 
-	FILE* f=popen("/boot/common/bin/cdrecord -scanbus","r");
+	FILE* f=popen("cdrecord -scanbus","r");
 	
 	char buf[1024];
 	char bufzer[1024];
