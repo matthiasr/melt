@@ -1,9 +1,12 @@
-OBJDIR=objects
+CC= $(CXX)
+CPPFLAGS+= -O3 -fstrict-aliasing -g
+LDLIBS+= -lbe -ltracker
 
-CPP=g++
-CPPFILES=Melt.cpp StyleUtils.cpp
-CPPFLAGS=-o $(OBJDIR)/Melt -O3 -fstrict-aliasing -Wall
-LDFLAGS=-lbe -lstdc++
+all: Melt
 
-all:
-	$(CPP) $(CPPFLAGS) $(CPPFILES) $(LDFLAGS)
+Melt: Melt.o StyleUtils.o
+
+clean:
+	rm -f *.o Melt
+
+.PHONY: clean
